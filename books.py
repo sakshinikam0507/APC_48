@@ -1,19 +1,28 @@
-books = ["Python Basics", "Data Structures", "Machine Learning"]
+books = {
+    101: "Python Basics",
+    102: "Data Structures",
+    103: "Machine Learning"
+}
 
-new_book = input("Enter a book to add: ")
-books.append(new_book)
+book_id = int(input("Enter book ID to add: "))
+book_name = input("Enter book name: ")
+books[book_id] = book_name
 
-search_book = input("Enter a book to search: ")
+book_id = int(input("Enter book ID to search: "))
 
-if search_book in books:
-    print("Book found")
+if book_id in books:
+    print("Book:", books[book_id])
 else:
     print("Book not found")
 
-remove_book = input("Enter a book to remove: ")
+book_id = int(input("Enter book ID to remove: "))
 
-if remove_book in books:
-    books.remove(remove_book)
+if book_id in books:
+    del books[book_id]
 
-print("Books:", books)
+print("Books:")
+
+for book_id, book_name in books.items():
+    print(book_id, "-", book_name)
+
 print("Total books:", len(books))
