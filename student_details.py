@@ -1,9 +1,6 @@
-student = {
-    "roll_number": 101,
-    "name": "Amit",
-    "department": "Computer Science",
-    "marks": 85
-}
+student = (101, "Amit", "Computer Science", 85)
 
-for key, value in student.items():
-    print(key, ":", value)
+print("Roll Number:", student[0])
+print("Name:", student[1])
+print("Department:", student[2])
+print("Marks:", student[3])

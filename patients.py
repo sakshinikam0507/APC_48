@@ -1,31 +1,29 @@
-names = ["Amit", "Riya", "Neha"]
-ages = [25, 31, 42]
+patients = (
+    (101, "Amit", 25, "A+"),
+    (102, "Riya", 31, "B+"),
+    (103, "Neha", 42, "O+"),
+    (104, "Rahul", 29, "A+")
+)
 
-name = input("Enter patient name: ")
-age = int(input("Enter patient age: "))
+for patient in patients:
+    print(patient)
 
-names.append(name)
-ages.append(age)
+patient_id = int(input("Enter patient ID: "))
+found = False
 
-search_name = input("Enter patient name to search: ")
+for patient in patients:
+    if patient[0] == patient_id:
+        print("Patient:", patient)
+        found = True
+        break
 
-if search_name in names:
-    index = names.index(search_name)
-    print("Patient found")
-    print("Age:", ages[index])
-else:
+if not found:
     print("Patient not found")
 
-delete_name = input("Enter patient name to delete: ")
+print("Total patients:", len(patients))
 
-if delete_name in names:
-    index = names.index(delete_name)
-    names.pop(index)
-    ages.pop(index)
+blood_group = input("Enter blood group: ")
 
-print("Patients:")
-
-for i in range(len(names)):
-    print(names[i], "-", ages[i])
-
-print("Total patients:", len(names))
+for patient in patients:
+    if patient[3] == blood_group:
+        print(patient)
