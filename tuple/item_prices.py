@@ -1,0 +1,5 @@
+prices = (100, 250, 75, 500, 150)
+print("Total bill:", sum(prices))
+print("Average price:", sum(prices) / len(prices))
+print("Highest price:", max(prices))
+print("Lowest price:", min(prices))
