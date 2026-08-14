@@ -1,10 +1,4 @@
-list1 = [10, 20, 30, 40, 50]
-list2 = [30, 40, 50, 60, 70]
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
 
-common = []
-
-for number in list1:
-    if number in list2 and number not in common:
-        common.append(number)
-
-print("Common elements:", common)
+print("Common elements:", set1.intersection(set2))

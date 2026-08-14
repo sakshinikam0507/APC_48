@@ -1,5 +1,5 @@
 numbers = [10, 20, 10, 30, 20, 40, 30]
 
-unique = set(numbers)
+numbers = set(numbers)
 
-print(unique)
+print(numbers)
