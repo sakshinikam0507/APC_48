@@ -1,0 +1,6 @@
+f=open("student.txt","r")
+text=f.read()
+f.close()
+g=open("upper.txt","w")
+g.write(text.upper())
+g.close()
